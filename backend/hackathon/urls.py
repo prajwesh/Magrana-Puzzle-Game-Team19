@@ -20,7 +20,6 @@ urlpatterns = [
     path("api/me", ApiMeView.as_view(), name="api_me"),
     path("api/logout", ApiLogoutView.as_view(), name="api_logout"),
     path("api/vocab/next/", views_vocab.next_vocab_word, name="next-vocab-word"),
-    # ADD THESE NEW ENDPOINTS
     path(
         "api/game-results/",
         views_game_results.save_game_results,

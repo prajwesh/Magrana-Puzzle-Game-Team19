@@ -19,7 +19,7 @@ function ExitSummaryPage() {
   const handleSaveAndExit = async () => {
     try {
       const userId = localStorage.getItem('user_id') || 1
-      
+
       // LOG what you're sending
       console.log('Sending:', {
         user_id: userId,
@@ -73,10 +73,10 @@ function ExitSummaryPage() {
               backgroundColor: '#ffffff',
               scale: 2,
             })
-            
+
             canvas.toBlob(async (blob) => {
               const file = new File([blob], 'magrana-summary.png', { type: 'image/png' })
-              
+
               if (navigator.canShare && navigator.canShare({ files: [file] })) {
                 try {
                   await navigator.share({

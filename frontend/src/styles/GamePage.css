@@ -7,7 +7,8 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  background-color: #fafafc; /* Light 4 */
+  background-color: #fafafc;
+  /* Light 4 */
   margin-top: 66px;
 }
 
@@ -25,16 +26,19 @@
 }
 
 .game-heading {
-  font-size: 28px; /* Heading 3 */
+  font-size: 28px;
+  /* Heading 3 */
   font-weight: 700;
-  color: #3a3a3c; /* Dark text */
+  color: #3a3a3c;
+  /* Dark text */
   margin: 0;
 }
 
 .game-subtitle {
   margin: 0;
   font-size: 14px;
-  color: #8f90a6; /* Dark 3 */
+  color: #8f90a6;
+  /* Dark 3 */
 }
 
 
@@ -45,18 +49,21 @@
   gap: 4px;
   padding: 12px 16px;
   border-radius: 8px;
-  background-color: #e3edff; /* Subtle */
+  background-color: #e3edff;
+  /* Subtle */
 }
 
 .game-score-panel .label {
   font-size: 12px;
-  color: #687588; /* Dark 2 */
+  color: #687588;
+  /* Dark 2 */
 }
 
 .score-value {
   font-size: 20px;
   font-weight: 600;
-  color: #0063f7; /* Info / primary accent */
+  color: #0063f7;
+  /* Info / primary accent */
 }
 
 /* Status row */
@@ -65,16 +72,19 @@
   gap: 16px;
   flex-wrap: wrap;
 }
+
 .timer-box {
   flex: 1;
   min-width: 180px;
   padding: 12px 16px;
   border-radius: 8px;
-  background-color: #f2f2f5; /* Light 3 */
+  background-color: #f2f2f5;
+  /* Light 3 */
   display: flex;
   flex-direction: column;
   gap: 4px;
-  position: relative; /* needed for absolute positioning */
+  position: relative;
+  /* needed for absolute positioning */
 }
 
 .timer-box::after {
@@ -88,16 +98,19 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .round-info {
   flex: 1;
   min-width: 180px;
   padding: 12px 16px;
   border-radius: 8px;
-  background-color: #f2f2f5; /* Light 3 */
+  background-color: #f2f2f5;
+  /* Light 3 */
   display: flex;
   flex-direction: column;
   gap: 4px;
-  position: relative; /* enables absolute positioning inside */
+  position: relative;
+  /* enables absolute positioning inside */
 }
 
 .round-info::after {
@@ -118,7 +131,8 @@
   min-width: 180px;
   padding: 12px 16px;
   border-radius: 8px;
-  background-color: #f2f2f5; /* Light 3 */
+  background-color: #f2f2f5;
+  /* Light 3 */
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -137,7 +151,8 @@
 }
 
 .timer-warning {
-  color: #ff3b3b; /* Error */
+  color: #ff3b3b;
+  /* Error */
 }
 
 .round-value {
@@ -155,10 +170,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  align-items: center;        
-  justify-content: center;    
-  text-align: center;         
-  position: relative;      
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
 }
 
 .game-board::after {
@@ -191,7 +206,8 @@
   width: 56px;
   height: 56px;
   border-radius: 8px;
-  background-color: #3377ff; /* Main blue */
+  background-color: #3377ff;
+  /* Main blue */
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -304,7 +320,8 @@
 
 /* Success and error boards */
 .board-success {
-  border: 2px solid #06C270; /* Success */
+  border: 2px solid #06C270;
+  /* Success */
   box-shadow: 0 0 0 1px rgba(6, 194, 112, 0.2);
   position: relative;
 }
@@ -322,7 +339,8 @@
 }
 
 .board-error {
-  border: 2px solid #FF3B3B; /* Error */
+  border: 2px solid #FF3B3B;
+  /* Error */
   background-color: #fff5f5;
   position: relative;
 }
@@ -409,4 +427,250 @@
 .btn-secondary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* ADD THIS AT THE END OF YOUR GamePage.css */
+
+/* === MOBILE VIEW (320px - 767px) === */
+@media (max-width: 767px) {
+  .game-container {
+    padding: 16px 12px;
+    /* Reduced padding */
+    margin-top: 50px;
+    gap: 16px;
+  }
+
+  .game-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .game-title-block {
+    text-align: center;
+  }
+
+  .game-heading {
+    font-size: 24px;
+    /* Smaller heading */
+  }
+
+  .game-score-panel {
+    align-items: center;
+    min-width: auto;
+  }
+
+  .score-value {
+    font-size: 18px;
+  }
+
+  /* Status row - Stack vertically */
+  .game-status-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .timer-box,
+  .round-info {
+    min-width: auto;
+  }
+
+  /* Game board */
+  .game-board {
+    padding: 20px 16px;
+  }
+
+  .tiles-row {
+    gap: 8px;
+  }
+
+  .letter-tile {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  /* Footer - Stack buttons */
+  .game-footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-actions-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  /* Buttons - Full width */
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  /* Share button */
+  .share-btn {
+    justify-content: center;
+  }
+}
+
+/* Extra small mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .game-container {
+    padding: 12px 8px;
+  }
+
+  .game-heading {
+    font-size: 20px;
+  }
+
+  .letter-tile {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .game-board {
+    padding: 16px 12px;
+  }
+}
+
+/* Base styles */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  /* allow vertical scrolling */
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* take full height */
+  overflow-y: auto;
+  /* enable scroll inside container */
+}
+
+/* Header, board, footer flex layout */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-board {
+  flex: 1;
+  /* expand to fill available space */
+  overflow-y: auto;
+  /* scrollable board if content exceeds */
+}
+
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive: Tablets & small devices */
+@media (max-width: 767px) {
+  .game-container {
+    padding: 16px 12px;
+    margin-top: 50px;
+    gap: 16px;
+  }
+
+  .game-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .game-title-block {
+    text-align: center;
+  }
+
+  .game-heading {
+    font-size: 24px;
+  }
+
+  .game-score-panel {
+    align-items: center;
+    min-width: auto;
+  }
+
+  .score-value {
+    font-size: 18px;
+  }
+
+  .game-status-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .timer-box,
+  .round-info {
+    min-width: auto;
+  }
+
+  .game-board {
+    padding: 20px 16px;
+  }
+
+  .tiles-row {
+    gap: 8px;
+  }
+
+  .letter-tile {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .game-footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-actions-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  .share-btn {
+    justify-content: center;
+  }
+}
+
+/* Extra small mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .game-container {
+    padding: 12px 8px;
+  }
+
+  .game-heading {
+    font-size: 20px;
+  }
+
+  .letter-tile {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .game-board {
+    padding: 16px 12px;
+  }
 }

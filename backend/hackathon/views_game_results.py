@@ -3,7 +3,12 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from django.utils import timezone
 from django.db import connections
+from datetime import datetime
+from datetime import datetime
+from pytz import timezone as pytz_timezone
 
+# Set your desired timezone, e.g., Asia/Kolkata
+india_time = datetime.now(pytz_timezone('Asia/Kolkata'))
 
 @api_view(["POST"])
 @permission_classes([AllowAny])
@@ -69,7 +74,7 @@ def save_game_results(request):
                     total_score,
                     total_time_spent,
                     tasks_completed,
-                    timezone.now(),
+                    india_time,
                 ],
             )
 
